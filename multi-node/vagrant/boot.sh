@@ -5,7 +5,7 @@ vagrant up
 
 kubectl config \
 	set-cluster vagrant-multi-cluster \
-	--server=https://172.17.4.101:443 \
+	--server=https://c1.localdomain.com:443 \
 	--certificate-authority=${PWD}/ssl/ca.pem
 
 kubectl config \
@@ -20,3 +20,4 @@ kubectl config \
 	--user=vagrant-multi-admin
 
 kubectl config use-context vagrant-multi
+kubectl get nodes
